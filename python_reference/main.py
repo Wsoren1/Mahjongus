@@ -44,7 +44,6 @@ class MahjongGame:
 
         return tiles
 
-
     def organize_hand(self, hand):
         """Organizes the hand for readability: suits, numbers, honors."""
 
@@ -76,7 +75,6 @@ class MahjongGame:
         walls = [np.reshape(wall, (2, 17)) for wall in walls]
 
         return walls
-
 
     def get_next_dora(self):
         if len(self.dead_wall[0]) > len(self.dora_indicators) + 1:
@@ -115,7 +113,6 @@ class MahjongGame:
 
         return dead_wall, walls
 
-
     def deal_hands(self, walls):
         """Deals hands to the four players."""
         hands = [[], [], [], []]
@@ -149,7 +146,6 @@ class MahjongGame:
         tile = self.drawing_order[0]
         self.drawing_order = self.drawing_order[1:]
         return tile
-
 
     def discard_tile(self, player_index, tile_index):
         """Discards the tile at the given index from the player's hand."""
@@ -287,7 +283,6 @@ class MahjongGame:
         self.open_melds[player_index].append([discarded_tile] * 3)
         print(f"Player {player_index + 1} called Pon on {discarded_tile}!")
 
-
     def perform_concealed_kan(self, tile):
         """Performs a concealed Kan, updating hand, melds, and Dora indicators."""
 
@@ -336,7 +331,6 @@ class MahjongGame:
 
                         return True
         return False
-
 
     def turn_prompt(self, called=False):
         player_name = PLAYER_NAMES[self.current_player]  # Get player name
@@ -592,7 +586,6 @@ class MahjongGame:
                 mark_as_matched([tile] * 2)
 
         return (len(blocks) + len(melds) == 5) and (len(unmatched) == 0)
-
 
     def check_riichi_ready(self, player_index):
         """Checks if a player is one tile away from a winning hand."""

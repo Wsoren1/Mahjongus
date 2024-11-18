@@ -1,0 +1,12 @@
+{
+  "name": "mahjongus",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "node cur_tests.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
